@@ -25,9 +25,9 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
-      Todo.Api
-      Todo.Types
+      API
+      Database
+      Schema
   other-modules:
       Paths_haskell_test
   autogen-modules:
@@ -38,9 +38,12 @@ library
   build-depends:
       aeson
     , base >=4.7 && <5
-    , servant
+    , postgresql-simple
+    , random
+    , servant-server
     , text
     , time
+    , warp
   default-language: Haskell2010
 
 executable haskell-test-exe
@@ -56,9 +59,12 @@ executable haskell-test-exe
       aeson
     , base >=4.7 && <5
     , haskell-test
-    , servant
+    , postgresql-simple
+    , random
+    , servant-server
     , text
     , time
+    , warp
   default-language: Haskell2010
 
 test-suite haskell-test-test
@@ -75,7 +81,10 @@ test-suite haskell-test-test
       aeson
     , base >=4.7 && <5
     , haskell-test
-    , servant
+    , postgresql-simple
+    , random
+    , servant-server
     , text
     , time
+    , warp
   default-language: Haskell2010

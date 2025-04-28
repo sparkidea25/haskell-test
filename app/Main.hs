@@ -1,6 +1,7 @@
-module Main (main) where
+{-# OPTIONS_GHC -Wno-missing-export-lists #-}
+module Main where
 
-import Lib
+import qualified BasicServer as B
 
 main :: IO ()
-main = someFunc
+main = B.runServer

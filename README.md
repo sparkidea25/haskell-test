@@ -10,3 +10,6 @@ Use Stack’s `--fast` flag for quicker builds during development:
 stack build --fast
 ```live reload
 ghcid
+
+```run
+stack run
